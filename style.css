@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    /* greyscale */
+    --white: #FFFFFF;
+
+    /* colors */
+    --main-bg-0-color: #533E85;
+    --main-bg-1-color: #433368;
+    --main-bg-2-color: #4FD3C4;
+    --main-bg-3-color: #C1F8CF;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 100vh;
+    padding: 16px;
+    color: var(--white);
+    background-color: var(--main-bg-0-color);
+    transition: all 0.2s ease;
+}
+/*active*/
+
+.sidebar.active .sidebar-title div{
+    display:none;
+}
+
+.sidebar.active{
+    width:50px;
+}
+
+.sidebar ul li span{
+    opacity:1;
+    display:block;
+    transition: all 0.2s ease;
+}
+
+.sidebar.active ul li span{
+    opacity:0;
+    display:none;
+}
+
+.sidebar-title {
+    margin: 0px 16px 16px 16px;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-title > div{
+    display:flex;
+    align-items: center;
+}
+.sidebar-title > div > i{
+    margin-right: 16px;
+}
+
+.sidebar>div>ul>li {
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+    width: 100%;
+    margin: 16px 0px;
+    height: 48px;
+    padding: 16px;
+    border-radius: 8px;
+    list-style: none;
+    transition: all ease 0.2s;
+}
+
+.sidebar>div>ul>li:hover {
+    background-color: var(--main-bg-1-color)
+}
+
+.sidebar>div>ul>li>.icon {
+    margin-right: 16px;
+}
+
+.sidebar>div>ul {
+    padding: 0px;
+    margin:0px;
+    width: 100%;
+}
+
+.user_message {
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    padding:16px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.profile_picture{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
